@@ -1,10 +1,13 @@
 pipeline {
     agent any 
 	
-    stages {
+	tools {nodejs "node"}
+    
+	stages {
         stage('Build') {
             steps {
-                echo 'sudo npm install'
+                git 'https://github.com/emersonrocha85/simple-node-js-react-npm-app'
+				bat 'npm install'
             }
         }
 
