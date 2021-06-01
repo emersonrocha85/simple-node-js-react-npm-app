@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                 git 'https://github.com/emersonrocha85/simple-node-js-react-npm-app'
-				bat 'npm install'
+				sh 'npm install'
             }
         }
 
